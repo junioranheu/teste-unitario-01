@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace ProjetoCalculadora
+﻿namespace ProjetoCalculadora
 {
     public static class Calculadora
     {
@@ -76,17 +74,6 @@ namespace ProjetoCalculadora
         public static double NumeroMenor(List<double> listaNumeros)
         {
             return listaNumeros.Min<double>(); 
-        }
-
-        public static bool ValidarSenha(string senha)
-        {
-            var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperChar = new Regex(@"[A-Z]+");
-            var hasMinimum8Chars = new Regex(@".{8,}");
-
-            var isValidated = hasNumber.IsMatch(senha) && hasUpperChar.IsMatch(senha) && hasMinimum8Chars.IsMatch(senha);
-
-            return isValidated;
         }
     }
 }

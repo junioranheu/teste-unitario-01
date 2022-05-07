@@ -102,14 +102,5 @@ namespace ProjetoCalculadora.Tests
             Assert.Equal(-10, Calculadora.NumeroMenor(new List<double>(new double[] { -10, 80.1, 1302.2, 4 })));
             Assert.Equal(-50000, Calculadora.NumeroMenor(new List<double>(new double[] { -50000, 1, -0.2 })));
         }
-
-        [Fact]
-        public void ValidarSenha()
-        {
-            Assert.False(Calculadora.ValidarSenha("123"));
-            Assert.True(Calculadora.ValidarSenha("Teste30@"));
-            Assert.False(Calculadora.ValidarSenha("TesteTeste"));
-            Assert.True(Calculadora.ValidarSenha("TesteTeste1"));
-        }
     }
 }
